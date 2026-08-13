@@ -1,5 +1,11 @@
 {
   "schemaVersion": 1,
+  "themePackage": {
+    "name": "@rathnasgala/theme",
+    "version": "0.0.1",
+    "availableDesignThemes": ["editorial"],
+    "securityAdvisories": []
+  },
   "files": {
     ".gitignore": "b5fa24e10155097a0d372926fd2e59e6072e7cc2cb6399bbfb4beb8b33ea315b",
     ".gala/publish.yml.template": "73080241d89bd09964b797a8bcc8e18471412e11bc873efad76305b60f497d08",
