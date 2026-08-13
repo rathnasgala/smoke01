@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   publish:
-    uses: rathnasgala/publish/.github/workflows/publish.yml@v1
+    uses: rathnasgala/publish/.github/workflows/publish.yml@v0.0.2
     with:
       operation: build
       mode: build-and-deploy
