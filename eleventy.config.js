@@ -1,5 +1,6 @@
 import { markdownLibrary } from './lib/render-markdown.js';
 import { readBuildManifest } from './lib/build-manifest.js';
+import { loadSiteConfiguration } from './lib/site-config.js';
 import { lstat, realpath } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -20,7 +21,7 @@ async function verifiedMediaSource(postSource, mediaSource) {
 }
 
 export default async function (eleventyConfig) {
-  const manifest = await readBuildManifest();
+  const [manifest, site] = await Promise.all([readBuildManifest(), loadSiteConfiguration()]);
   eleventyConfig.setLibrary('md', markdownLibrary);
   eleventyConfig.addPassthroughCopy({ static: '/' });
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
@@ -42,6 +43,6 @@ export default async function (eleventyConfig) {
       includes: '_includes',
       data: '_data'
     },
-    pathPrefix: process.env.GALA_PATH_PREFIX ?? '/'
+    pathPrefix: site.hosting.pathPrefix === '' ? '/' : site.hosting.pathPrefix
   };
 }

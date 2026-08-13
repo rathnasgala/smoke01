@@ -15,7 +15,7 @@ import {
 test('composes topology prefixes without hardcoded root assumptions', () => {
   assert.equal(siteUrl({
     canonicalBaseUrl: 'https://example.com/',
-    pathPrefix: '/',
+    pathPrefix: '',
     relativePath: '/'
   }), 'https://example.com/');
   assert.equal(siteUrl({
@@ -33,6 +33,14 @@ test('composes topology prefixes without hardcoded root assumptions', () => {
     pathPrefix: '/notes',
     relativePath: '/fr-CA/café/'
   }), 'https://example.com/notes/fr-CA/caf%C3%A9/');
+});
+
+test('rejects a path-bearing canonical base instead of double-counting the prefix', () => {
+  assert.throws(() => siteUrl({
+    canonicalBaseUrl: 'https://example.com/blog',
+    pathPrefix: '/blog',
+    relativePath: '/post/'
+  }), /pathPrefix/);
 });
 
 test('refuses paths that can escape or reinterpret the configured topology prefix', () => {

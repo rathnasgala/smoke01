@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "themePackage": {
     "name": "@rathnasgala/theme",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "availableDesignThemes": ["editorial"],
     "securityAdvisories": []
   },
   "files": {
     ".gitignore": "b5fa24e10155097a0d372926fd2e59e6072e7cc2cb6399bbfb4beb8b33ea315b",
     ".gala/publish.yml.template": "73080241d89bd09964b797a8bcc8e18471412e11bc873efad76305b60f497d08",
-    "eleventy.config.js": "0b8c753a28afecdf733ea650cab5fd0691a87f996bc186820c5f949003891cc9",
+    "eleventy.config.js": "b51fdaae7613edb37d2b33bf1429c94f29e308ccac2827cf2438573a88aab01d",
     "package.json": "86e1e9922fda15122fe4eb5325d30d145cbdb2877e24307914702d0b64cf1ce9",
     "package-lock.json": "92372b1bfbdeedf53a8942b3a4e774da3f708ebbf177d92f2b6280e83981df67",
     "lib/build-manifest.js": "88949f0112d683ca809bb67ca969e15634792423559a67bc79a534cd807e5535",
@@ -17,7 +17,7 @@
     "lib/engagement-snapshot.js": "298c11b1ab135a3a98a4e31b6320ab60dfd7fda6a9d9053df37d86282a5a6687",
     "lib/publication-state.js": "1b59c29a18bbb1193bddea898dac3a4fb832c7bc4751263be086f3d64392dea0",
     "lib/render-markdown.js": "3c493e50264711ee537bf34db826ee39780a6caad5c82174919f48e18fc76ae8",
-    "lib/seo.js": "609ae1c3a1b484dd7c37592d672d13c9aad8005471e2223caaabd2a8e800d194",
+    "lib/seo.js": "107de8804931945b8e73894877fc394d6b535a9d0d969a4ba5b68f2e136e0a17",
     "src/404.njk": "be0d44370ac5402156aaf3d32ea581057bc61ec94c1a5f92bb809733af7a8a20",
     "src/_includes/layouts/base.njk": "4def165838c1314c5d7b3759830d268ad48ee6a966dafe492ae7b0bb5018a7c7",
     "src/_includes/layouts/post.njk": "ced9783eae1b4ca51b950edf19224cd4022294775c9dcc78964b65e504e9d497",

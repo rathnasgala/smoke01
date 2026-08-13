@@ -4,7 +4,7 @@ schemaVersion: 1
 framework:
   themePackage:
     name: "@rathnasgala/theme"
-    version: 0.0.1
+    version: 0.0.2
 site:
   id: 01KZWXZWV95H54KP0BATZB3B9C
   name: Gala Smoke 01
@@ -14,7 +14,7 @@ site:
 hosting:
   provider: github-pages
   topology: provider-default
-  canonicalBaseUrl: https://rathnasgala.github.io/smoke01
+  canonicalBaseUrl: https://rathnasgala.github.io
   pathPrefix: /smoke01
 design:
   theme: editorial

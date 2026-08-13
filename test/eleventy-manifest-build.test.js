@@ -160,13 +160,15 @@ test('Eleventy emits only current manifest pages and renders tombstones in place
     cwd: root,
     env: {
       ...process.env,
-      GALA_PATH_PREFIX: '/blog/',
+      GALA_PATH_PREFIX: '/wrong-environment-prefix/',
       GALA_BUILD_INSTANT: '2026-06-15T12:30:00Z'
     }
   });
 
   const published = await readFile(path.join(root, '_site', 'en', 'validated', 'index.html'), 'utf8');
   assert.match(published, /<strong>body<\/strong>/);
+  assert.match(published, /href="\/blog\/assets\/theme\.css"/);
+  assert.doesNotMatch(published, /wrong-environment-prefix/);
   assert.match(
     published,
     /<link rel="canonical" href="https:\/\/canonical.example\/validated\?source=gala&amp;language=en">/
