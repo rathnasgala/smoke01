@@ -1,15 +1,15 @@
 schemaVersion: 1
 site:
-  id: unavailable
-  name: New Gala Site
-  author: New Gala Site
+  id: 01KZWXZWV95H54KP0BATZB3B9C
+  name: Gala Smoke 01
+  author: Gala Smoke
   defaultLanguage: en
-  timezone: UTC
+  timezone: America/Los_Angeles
 hosting:
   provider: github-pages
   topology: provider-default
-  canonicalBaseUrl: unavailable
-  pathPrefix: /unavailable
+  canonicalBaseUrl: https://rathnasgala.github.io/smoke01
+  pathPrefix: /smoke01
 design:
   theme: editorial
   layout: article-first
