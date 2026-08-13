@@ -1,4 +1,6 @@
 schemaVersion: 1
+# Managed by Gala CLI. Change visual choices under design; use `gala upgrade`
+# to change this exact artifact pin so installed files and the pin stay aligned.
 framework:
   themePackage:
     name: "@rathnasgala/theme"
