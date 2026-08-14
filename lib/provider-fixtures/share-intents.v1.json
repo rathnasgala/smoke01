@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "providers": {
+    "bluesky": { "source": "https://docs.bsky.app/docs/advanced-guides/intent-links", "verifiedOn": "2026-08-13", "status": "verified", "template": "https://bsky.app/intent/compose?text={text}" },
+    "x": { "source": "https://developer.x.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent", "verifiedOn": "2026-08-13", "status": "verified", "template": "https://twitter.com/intent/tweet?text={text}&url={url}" },
+    "linkedin": { "source": "https://www.linkedin.com/help/linkedin/answer/a522735", "status": "blocked-public-intent-contract-unverified" },
+    "reddit": { "source": "https://www.reddit.com/dev/api/#POST_api_submit", "status": "blocked-public-intent-contract-unverified" },
+    "hacker-news": { "source": "https://news.ycombinator.com/bookmarklet.html", "verifiedOn": "2026-08-13", "status": "verified", "template": "https://news.ycombinator.com/submitlink?u={url}&t={title}" },
+    "whatsapp": { "source": "https://faq.whatsapp.com/5913398998672934", "status": "blocked-public-intent-contract-unverified" },
+    "email": { "source": "https://www.rfc-editor.org/rfc/rfc6068", "verifiedOn": "2026-08-13", "status": "verified", "template": "mailto:?subject={title}&body={text}" },
+    "mastodon": { "source": "https://docs.joinmastodon.org/user/external/#share", "verifiedOn": "2026-08-13", "status": "verified", "template": "https://{instance}/share?text={text}", "requiresInstance": true }
+  }
+}

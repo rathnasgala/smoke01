@@ -1,10 +1,8 @@
 schemaVersion: 1
-# Managed by Gala CLI. Change visual choices under design; use `gala upgrade`
-# to change this exact artifact pin so installed files and the pin stay aligned.
 framework:
   themePackage:
     name: "@rathnasgala/theme"
-    version: 0.0.2
+    version: 0.0.5
 site:
   id: 01KZWXZWV95H54KP0BATZB3B9C
   name: Gala Smoke 01
@@ -16,6 +14,7 @@ hosting:
   topology: provider-default
   canonicalBaseUrl: https://rathnasgala.github.io
   pathPrefix: /smoke01
+  canonicalPolicy: self
 design:
   theme: editorial
   layout: article-first
@@ -30,4 +29,8 @@ design:
 sharing:
   targets: []
   socialProfiles: {}
-canonicalPolicy: self
+performance:
+  budgets:
+    managedJavaScriptBytes: 32768
+    managedCssBytes: 16384
+    ordinaryHtmlBytes: 32768

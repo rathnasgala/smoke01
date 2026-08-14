@@ -13,5 +13,24 @@
 {% macro tableOfContents(items) %}<nav class="gala-toc" aria-label="Table of contents"><ol>{% for item in items %}<li><a href="#{{ item.id }}">{{ item.text }}</a></li>{% endfor %}</ol></nav>{% endmacro %}
 {% macro shareControl(canonicalUrl, targets=[]) %}<section class="gala-share" aria-label="Share this article"><button type="button" data-copy-url="{{ canonicalUrl | escape }}" aria-label="Copy canonical URL">Copy link</button><output class="gala-share__status" aria-live="polite"></output><input class="gala-share__fallback" value="{{ canonicalUrl | escape }}" readonly aria-label="Canonical URL">{% if targets.length %}<ul>{% for target in targets %}<li><a href="{{ target.url | escape }}" rel="noopener noreferrer" aria-label="Share on {{ target.label | escape }}">{{ target.label }}</a></li>{% endfor %}</ul>{% endif %}</section>{% endmacro %}
 {% macro languageSwitcher(links, currentLanguage) %}{% if links.length > 2 %}<label>Preferred language <select data-language-preference data-navigate-on-selection>{% for link in links %}{% if link.hreflang != "x-default" %}<option value="{{ link.hreflang | escape }}" data-url="{{ link.href | escape }}"{% if link.hreflang == currentLanguage %} selected{% endif %}>{{ link.hreflang }}</option>{% endif %}{% endfor %}</select></label>{% endif %}{% endmacro %}
-{% macro engagementSummary(articleId, engagement) %}<section class="gala-engagement" aria-label="Engagement" data-article-id="{{ articleId | escape }}">{% if engagement.available %}<dl data-engagement-snapshot><div><dt>Reactions</dt><dd>{{ engagement.reactions }}</dd></div><div><dt>Comments</dt><dd>{{ engagement.comments }}</dd></div><div><dt>Views</dt><dd>{{ engagement.views }}</dd></div></dl>{% else %}<p class="gala-engagement__placeholder" role="status">Engagement data unavailable.</p>{% endif %}<output data-engagement-status aria-live="polite"></output></section>{% endmacro %}
+{% macro engagementSummary(articleId, engagement, apiBaseUrl) %}
+<section class="gala-engagement" aria-label="Engagement" data-article-id="{{ articleId | escape }}" data-engagement-url="{{ apiBaseUrl | escape }}/v1/articles/{{ articleId | escape }}/engagement">
+  {% if engagement.available %}<dl data-engagement-snapshot><div><dt>Reactions</dt><dd>{{ engagement.reactions }}</dd></div><div><dt>Comments</dt><dd>{{ engagement.comments }}</dd></div><div><dt>Views</dt><dd>{{ engagement.views }}</dd></div></dl>{% else %}<p class="gala-engagement__placeholder" role="status">Loading engagement data.</p>{% endif %}
+  <div data-engagement-live></div>
+  <section class="gala-engagement-actions" aria-label="Reader actions" data-engagement-actions hidden>
+    <div class="gala-reaction-actions" role="group" aria-label="React to this article">
+      {% for reaction in ['like', 'love', 'insightful', 'curious', 'celebrate', 'support'] %}<button type="button" data-reaction="{{ reaction }}" aria-pressed="false">{{ reaction | capitalize }}</button>{% endfor %}
+    </div>
+    <button type="button" data-follow-article aria-pressed="false">Follow article</button>
+    <form data-comment-create>
+      <label>Comment<textarea name="body" maxlength="5000" required></textarea></label>
+      <p data-comment-reply-context hidden></p>
+      <button type="submit">Post comment</button>
+      <button type="button" data-cancel-reply hidden>Cancel reply</button>
+    </form>
+  </section>
+  <p data-engagement-sign-in>Sign in from the account menu to comment, react, or follow.</p>
+  <output data-engagement-status aria-live="polite"></output>
+</section>
+{% endmacro %}
 {% macro pageFooter(siteName, links=[]) %}<footer class="gala-page-footer"><p>&copy; {{ siteName }}</p>{% if links.length %}<nav aria-label="Footer"><ul>{% for link in links %}<li><a href="{{ link.url }}">{{ link.label }}</a></li>{% endfor %}</ul></nav>{% endif %}</footer>{% endmacro %}

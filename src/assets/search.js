@@ -1,6 +1,4 @@
-const search = document.querySelector('[data-gala-search]');
-
-if (search) {
+document.querySelectorAll('[data-gala-search]').forEach((search) => {
   const form = search.querySelector('form');
   const query = form?.elements.namedItem('q');
   const status = search.querySelector('[data-search-status]');
@@ -78,4 +76,4 @@ if (search) {
   const initial = new URLSearchParams(window.location.search).get('q') ?? '';
   if (query) query.value = initial;
   run(initial);
-}
+});

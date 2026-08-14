@@ -38,6 +38,45 @@ body {
   font-family: var(--gala-font-body);
 }
 
+.gala-site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-inline-size: var(--gala-content-width);
+  margin-inline: auto;
+  margin-block-end: 1.5rem;
+}
+
+.gala-site-header__actions { display: flex; gap: 0.5rem; }
+.gala-icon-control {
+  display: inline-grid;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  box-sizing: border-box;
+  padding: 0.6rem;
+  place-items: center;
+  color: inherit;
+  border: 0.125rem solid transparent;
+  border-radius: 50%;
+}
+.gala-icon-control:hover { background: var(--gala-color-surface); }
+.gala-icon-control:focus-visible { outline: 0.1875rem solid currentcolor; outline-offset: 0.1875rem; }
+.gala-icon-control svg { inline-size: 100%; block-size: 100%; fill: currentcolor; }
+
+.gala-dialog {
+  inline-size: min(42rem, calc(100% - 2rem));
+  max-block-size: calc(100% - 2rem);
+  box-sizing: border-box;
+  padding: 1.5rem;
+  color: var(--gala-color-text);
+  background: var(--gala-color-background);
+  border: 0.125rem solid var(--gala-color-border);
+  border-radius: var(--gala-radius-control);
+}
+.gala-dialog::backdrop { background: rgb(0 0 0 / 65%); }
+.gala-dialog__close { float: inline-end; }
+.gala-account-dialog iframe { inline-size: 100%; min-block-size: 22rem; border: 0; }
+
 main,
 .gala-page-footer {
   max-inline-size: var(--gala-content-width);
@@ -107,11 +146,32 @@ button:focus-visible {
 .gala-engagement dl > div { display: grid; gap: 0.25rem; }
 .gala-engagement dd { margin: 0; font-size: 1.25rem; font-weight: 700; }
 .gala-engagement__placeholder { display: grid; min-block-size: var(--gala-widget-min-block-size); align-content: center; margin: 0; }
+.gala-engagement-profile { margin-block: 1.5rem; padding: 1rem; background: var(--gala-color-surface); border-radius: var(--gala-radius-control); }
+.gala-engagement-profile > * { margin-block: 0 0.5rem; }
+.gala-comments { display: grid; gap: 1rem; padding-inline-start: 1.5rem; }
+.gala-comments li { padding: 1rem; background: var(--gala-color-surface); border-radius: var(--gala-radius-control); }
+.gala-engagement-actions { display: grid; gap: 1rem; margin-block-start: 1.5rem; }
+.gala-engagement-actions[hidden] { display: none; }
+.gala-reaction-actions,
+.gala-comment-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.gala-engagement-actions form,
+[data-comment-editor] { display: grid; gap: 0.5rem; max-inline-size: 42rem; }
+.gala-engagement-actions label { display: grid; gap: 0.5rem; }
+.gala-engagement-actions textarea,
+[data-comment-editor] textarea { min-block-size: 7rem; padding: 0.75rem; font: inherit; }
 .gala-page-footer { margin-block-start: 4rem; padding-block-start: 1rem; border-block-start: 0.125rem solid var(--gala-color-border); }
 .gala-error-page { min-block-size: 60vh; display: grid; align-content: center; justify-items: start; }
 .gala-code-block { position: relative; }
 .gala-code-block > button { position: absolute; inset-block-start: 0.5rem; inset-inline-end: 0.5rem; background: var(--gala-color-background); }
 .gala-code-block pre { overflow: auto; padding: 3.5rem 1rem 1rem; background: var(--gala-color-surface); border-radius: var(--gala-radius-control); }
+.shiki,
+.shiki span { color: var(--shiki-light); background-color: var(--shiki-light-bg); }
+:root[data-mode='dark'] .shiki,
+:root[data-mode='dark'] .shiki span { color: var(--shiki-dark); background-color: var(--shiki-dark-bg); }
+@media (prefers-color-scheme: dark) {
+  :root[data-mode='system'] .shiki,
+  :root[data-mode='system'] .shiki span { color: var(--shiki-dark); background-color: var(--shiki-dark-bg); }
+}
 .gala-visually-hidden { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 @keyframes gala-spin { to { transform: rotate(1turn); } }

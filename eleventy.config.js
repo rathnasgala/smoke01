@@ -1,6 +1,7 @@
 import { markdownLibrary } from './lib/render-markdown.js';
 import { readBuildManifest } from './lib/build-manifest.js';
 import { loadSiteConfiguration } from './lib/site-config.js';
+import { enforcePerformanceBudgets } from './lib/performance-budget.js';
 import { lstat, realpath } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -35,6 +36,12 @@ export default async function (eleventyConfig) {
   eleventyConfig.addCollection('posts', (collectionApi) =>
     collectionApi.getAll().filter((item) => item.data.post?.publicationState === 'published')
   );
+  eleventyConfig.on('eleventy.after', async () => {
+    await enforcePerformanceBudgets({
+      outputDirectory: path.resolve('_site'),
+      budgets: site.performance.budgets
+    });
+  });
 
   return {
     dir: {

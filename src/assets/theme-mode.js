@@ -14,7 +14,9 @@ function applyMode(mode) {
   document.documentElement.dataset.mode = mode;
   const next = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
   document.querySelectorAll('[data-theme-mode-toggle]').forEach((control) => {
-    control.textContent = `Theme: ${mode}`;
+    const label = control.querySelector?.('[data-theme-mode-label]');
+    if (label) label.textContent = `Theme: ${mode}`;
+    else control.textContent = `Theme: ${mode}`;
     control.setAttribute('aria-label', `Color mode: ${mode}. Activate for ${next}.`);
   });
 }
