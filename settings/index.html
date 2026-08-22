@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="editorial" data-palette="default" data-mode="system">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>(function(){try{var m=localStorage.getItem('gala-color-mode');if(m==='light'||m==='dark'||m==='system')document.documentElement.dataset.mode=m}catch(e){}})();</script>
+    <title>Settings · Gala Smoke 01</title>
+    
+    
+    <link rel="alternate" type="application/atom+xml" hreflang="en" title="Gala Smoke 01 — en" href="https://rathnasgala.github.io/smoke01/feed/en.xml">
+    
+    
+    <link rel="stylesheet" href="/smoke01/assets/theme.css">
+    <link rel="stylesheet" href="/smoke01/custom.css">
+    <script src="/smoke01/assets/theme-mode.js" defer></script>
+    <script src="/smoke01/assets/preferences.js" defer></script>
+    <script src="/smoke01/assets/interactions.js" defer></script>
+    <script src="/smoke01/assets/search.js" defer></script>
+  </head>
+  <body>
+    <header class="gala-site-header">
+      <a class="gala-icon-control" href="/smoke01/" aria-label="Home" title="Home">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      </a>
+      <nav class="gala-site-header__actions" aria-label="Site controls">
+        <button class="gala-icon-control" type="button" data-theme-mode-toggle aria-label="Color mode: system. Activate for light." title="Appearance">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18V3Zm0 2v14a7 7 0 0 1 0-14Z"/></svg>
+          <span class="gala-visually-hidden" data-theme-mode-label>Theme: system</span>
+        </button>
+        <button class="gala-icon-control" type="button" data-open-dialog="gala-settings-dialog" aria-label="Settings" title="Settings">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10.6 2h2.8l.7 2.2 1.5.9 2.3-.5 1.4 2.4-1.6 1.7v1.7l1.6 1.7-1.4 2.4-2.3-.5-1.5.9-.7 2.2h-2.8l-.7-2.2-1.5-.9-2.3.5-1.4-2.4 1.6-1.7V8.7L4.7 7l1.4-2.4 2.3.5 1.5-.9.7-2.2Zm1.4 6.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+        </button>
+        <button class="gala-icon-control" type="button" data-open-dialog="gala-search-dialog" aria-label="Search" title="Search">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 1 0 4.7 13.3l4.8 4.8 1.4-1.4-4.8-4.8A7.5 7.5 0 0 0 10.5 3Zm0 2a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Z"/></svg>
+        </button>
+        <button class="gala-icon-control" type="button" data-open-dialog="gala-account-dialog" data-user-control aria-label="Sign in or view account" title="Account">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm0 11c-5 0-8 2.5-8 5.5V21h16v-1.5C20 16.5 17 14 12 14Z"/></svg>
+        </button>
+      </nav>
+    </header>
+    <main id="main-content"><h1>Reader settings</h1>
+<section aria-labelledby="theme-setting">
+  <h2 id="theme-setting">Theme</h2>
+  <button type="button" data-theme-mode-toggle aria-label="Color mode: system. Activate for light.">Theme: system</button>
+</section>
+<section aria-labelledby="language-setting">
+  <h2 id="language-setting">Language preference</h2>
+  <p>Your preference highlights matching choices. The language in the page URL always controls the content.</p>
+  <label>Preferred language
+    <select data-language-preference>
+      <option value="en">en</option>
+    </select>
+  </label>
+</section>
+</main>
+    <dialog id="gala-settings-dialog" class="gala-dialog" aria-labelledby="gala-settings-title">
+      <form method="dialog" class="gala-dialog__close"><button type="submit" aria-label="Close settings">Close</button></form>
+      <h2 id="gala-settings-title">Reader settings</h2>
+      <section aria-labelledby="gala-dialog-theme-setting">
+        <h3 id="gala-dialog-theme-setting">Appearance</h3>
+        <button type="button" data-theme-mode-toggle aria-label="Color mode: system. Activate for light."><span data-theme-mode-label>Theme: system</span></button>
+      </section>
+      <section aria-labelledby="gala-dialog-language-setting">
+        <h3 id="gala-dialog-language-setting">Language preference</h3>
+        <label>Preferred language
+          <select data-language-preference><option value="en">en</option></select>
+        </label>
+      </section>
+      <p><a href="/smoke01/settings/">Open settings page</a></p>
+    </dialog>
+    <dialog id="gala-search-dialog" class="gala-dialog" aria-labelledby="gala-search-title">
+      <form method="dialog" class="gala-dialog__close"><button type="submit" aria-label="Close search">Close</button></form>
+      <h2 id="gala-search-title">Search</h2>
+      <section data-gala-search data-index-url="/smoke01/search-index.json">
+        <form class="gala-search" action="/smoke01/search/" role="search">
+          <label for="gala-dialog-search-query">Search published posts</label>
+          <input id="gala-dialog-search-query" name="q" type="search" autocomplete="off">
+          <button type="submit">Search</button>
+        </form>
+        <p data-search-status role="status" aria-live="polite">Enter a search term.</p>
+        <ol class="gala-search-results" data-search-results></ol>
+      </section>
+      <p><a href="/smoke01/search/">Open search page</a></p>
+    </dialog>
+    
+    <dialog id="gala-account-dialog" class="gala-dialog gala-account-dialog" aria-labelledby="gala-account-title">
+      <form method="dialog" class="gala-dialog__close"><button type="submit" aria-label="Close account">Close</button></form>
+      <h2 id="gala-account-title">Gala account</h2>
+      <iframe data-gala-session-frame title="Gala account and sign in" src="https://api.gala67.com/v1/widget/session?siteId=01KZWXZWV95H54KP0BATZB3B9C"></iframe>
+    </dialog>
+    
+  </body>
+</html>

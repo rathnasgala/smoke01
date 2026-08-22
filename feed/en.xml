@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://rathnasgala.github.io/smoke01/feed/en.xml</id>
+  <title>Gala Smoke 01 — en</title>
+  <author><name>Gala Smoke</name></author>
+  <updated>2026-08-22T03:34:12.387Z</updated>
+  <link rel="self" href="https://rathnasgala.github.io/smoke01/feed/en.xml"/>
+  <entry>
+    <id>urn:gala:article:01M0FZJ9RGBQS7TFN0GQYP9F43:en</id>
+    <title>sarw</title>
+    <updated>2026-08-20T00:00:00.000Z</updated>
+    <link href="https://rathnasgala.github.io/smoke01/en/my-new-post/"/>
+    <content type="html">&lt;h1 id=&quot;sarw&quot;&gt;Sarw&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur&lt;/em&gt; adipisicing elit, sed do eiusmod
+tempor incididunt ut &lt;strong&gt;labore et dolore magna aliqua&lt;/strong&gt;. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. &lt;em&gt;&lt;strong&gt;Duis aute irure dolor&lt;/strong&gt;&lt;/em&gt; in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;h2 id=&quot;h2&quot;&gt;H2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur&lt;/em&gt; adipisicing elit, sed do eiusmod
+tempor incididunt ut &lt;strong&gt;labore et dolore magna aliqua&lt;/strong&gt;. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Duis aute irure dolor&lt;/strong&gt;&lt;/em&gt; in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;h3 id=&quot;h3&quot;&gt;H3&lt;/h3&gt;
+&lt;p&gt;unordered list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;item-1
+&lt;ul&gt;
+&lt;li&gt;sub-item-1&lt;/li&gt;
+&lt;li&gt;sub-item-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;item-2
+&lt;ul&gt;
+&lt;li&gt;sub-item-3&lt;/li&gt;
+&lt;li&gt;sub-item-4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;item-3
+&lt;ul&gt;
+&lt;li&gt;sub-item-5&lt;/li&gt;
+&lt;li&gt;sub-item-6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ordered list:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;item-1
+&lt;ol&gt;
+&lt;li&gt;sub-item-1&lt;/li&gt;
+&lt;li&gt;sub-item-2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;item-2
+&lt;ol&gt;
+&lt;li&gt;sub-item-3&lt;/li&gt;
+&lt;li&gt;sub-item-4&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;item-3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;header4&quot;&gt;Header4&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Table Header-1&lt;/th&gt;
+&lt;th&gt;Table Header-2&lt;/th&gt;
+&lt;th&gt;Table Header-3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Table Data-1&lt;/td&gt;
+&lt;td&gt;Table Data-2&lt;/td&gt;
+&lt;td&gt;Table Data-3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TD-4&lt;/td&gt;
+&lt;td&gt;Td-5&lt;/td&gt;
+&lt;td&gt;TD-6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Table Data-7&lt;/td&gt;
+&lt;td&gt;Table Data-8&lt;/td&gt;
+&lt;td&gt;Table Data-9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&quot;header5&quot;&gt;Header5&lt;/h5&gt;
+&lt;p&gt;You may also want some images right in here like &lt;img src=&quot;https://cloud.githubusercontent.com/assets/5456665/13322882/e74f6626-dc00-11e5-921d-f6d024a01eaa.png&quot; alt=&quot;GitHub Logo&quot; title=&quot;GitHub&quot; /&gt; - you can do that but I would recommend you to use the component &quot;image&quot; and simply split your text.&lt;/p&gt;
+&lt;h6 id=&quot;header6&quot;&gt;Header6&lt;/h6&gt;
+&lt;p&gt;Let us do some links - this for example: &lt;a href=&quot;https://github.com/MinhasKamal/github-markdown-syntax&quot;&gt;https://github.com/MinhasKamal/github-markdown-syntax&lt;/a&gt; is &lt;strong&gt;NOT&lt;/strong&gt; a link but this: is &lt;a href=&quot;https://github.com/MinhasKamal/github-markdown-syntax&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>urn:gala:article:01K00000000000000000000000:en</id>
+    <title>Example post</title>
+    <updated>2026-08-10T00:00:00.000Z</updated>
+    <link href="https://rathnasgala.github.io/smoke01/en/example/"/>
+    <content type="html">&lt;p&gt;Replace this example with your first post.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
